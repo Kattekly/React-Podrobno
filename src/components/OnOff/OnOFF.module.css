@@ -17,14 +17,14 @@ button {
 
 .circle1 button {
     width: 10px;
-    height: 10px;
+    height: 15px;
     border-radius: 50%;
     background: green;
 }
 
 .circle2 button {
     width: 10px;
-    height: 10px;
+    height: 15px;
     border-radius: 50%;
     background: red;
 }
