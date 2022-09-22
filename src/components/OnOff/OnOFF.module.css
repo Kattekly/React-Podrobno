@@ -1,0 +1,12 @@
+button {
+    background: white;
+    color: black;
+}
+
+.on button:focus {
+    background: green;
+}
+
+.off button:focus {
+    background: red;
+}

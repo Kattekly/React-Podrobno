@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Raiting} from "./components/Raiting/Raiting";
+import OnOff from "./components/OnOff/OnOff";
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
             <PageTitle title={"My friend"} />
             Article 1
             <Raiting value={3} />
-            <Accordion titleValue={"Menu"} collapsed={true} />
-            <Accordion titleValue={"Users"} collapsed={false} />
+            <Accordion titleValue={"--Menu--"} collapsed={true} />
+            <Accordion titleValue={"--Users--"} collapsed={false} />
             Article 2
             <Raiting value={0} />
             <Raiting value={1} />
@@ -22,6 +23,12 @@ function App() {
             <Raiting value={3} />
             <Raiting value={4} />
             <Raiting value={5} />
+            <div>
+                <OnOff call={true}/>
+            </div>
+            <div>
+                <OnOff call={false}/>
+            </div>
         </div>
     );
 }
