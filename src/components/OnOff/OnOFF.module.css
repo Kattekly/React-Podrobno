@@ -1,12 +1,30 @@
+.item {
+    padding: 10px;
+}
+
 button {
     background: white;
     color: black;
 }
 
-.on button:focus {
+.on button {
     background: green;
 }
 
-.off button:focus {
+.off button {
+    background: red;
+}
+
+.circle1 button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: green;
+}
+
+.circle2 button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     background: red;
 }
