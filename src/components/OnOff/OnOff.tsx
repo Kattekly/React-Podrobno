@@ -2,17 +2,25 @@ import React from 'react';
 import s from "./OnOFF.module.css"
 
 type  OnOffType = {
-    call: boolean
+    on: boolean
 }
 
-const onStyle = {}
-const onStyle = {}
+
 
 function OnOff(props: OnOffType) {
+    const onStyle = {}
+    const offStyle = {}
+    const indicatorStyle = {
+        width: '30px',
+        height: '30px',
+        borderRadius: '15px',
+        border: '1px solid black'
+    }
+
     return <div>
         <div></div>
         <div></div>
-        <div></div>
+        <div style={indicatorStyle}></div>
     </div>
 }
 
