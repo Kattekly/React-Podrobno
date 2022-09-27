@@ -25,6 +25,7 @@ function App() {
             <Raiting value={5} />
 <div>
     <OnOff />
+    <OnOff />
 </div>
             {/*<div>
                 <OnOff1 call={true}/>
@@ -41,7 +42,6 @@ type PageTitlePropsType = {
 }
 
 function PageTitle(props: PageTitlePropsType) {
-    debugger
     console.log("PageTitle rendered")
     return <h1>{props.title}</h1>
 }
