@@ -24,7 +24,7 @@ function App() {
             <Raiting value={4} />
             <Raiting value={5} />
 <div>
-    <OnOff on={true}/>
+    <OnOff />
 </div>
             {/*<div>
                 <OnOff1 call={true}/>
