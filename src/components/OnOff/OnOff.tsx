@@ -5,6 +5,18 @@ type  OnOffType = {
     call: boolean
 }
 
+const onStyle = {}
+const onStyle = {}
+
+function OnOff(props: OnOffType) {
+    return <div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+}
+
+/*
 const OnOff = (props: OnOffType) => {
     return (
         <div className={s.item}>
@@ -30,6 +42,6 @@ export const OnOff1 = (props: OnOffType) => {
             <span className={s.circle2}> <button></button> </span>
         </div>
     }
-}
+}*/
 
 export default OnOff;
