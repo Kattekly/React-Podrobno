@@ -10,7 +10,7 @@ import {UncontrolledRaiting} from "./components/Raiting/UncontrolledRaiting";
 function App() {
     console.log("App rendered")
     return (
-        <div>
+        <div className={'App'}>
             <PageTitle title={"App component"} />
             <PageTitle title={"User"} />
             <PageTitle title={"My friend"} />
