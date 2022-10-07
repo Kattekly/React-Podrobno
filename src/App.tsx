@@ -10,7 +10,7 @@ import {UncontrolledRaiting} from "./components/Raiting/UncontrolledRaiting";
 function App() {
     console.log("App rendered")
 
-    let[ratingValue, setratingValue] = useState<RatingValueType>(0)
+    let[ratingValue, setRatingValue] = useState<RatingValueType>(3)
 
 
     return (
@@ -19,16 +19,11 @@ function App() {
             <PageTitle title={"User"} />
             <PageTitle title={"My friend"} />
             Article 1
-            <Raiting value={3} />
             <Accordion titleValue={"--Menu--"} collapsed={true} />
             <Accordion titleValue={"--Users--"} collapsed={false} />
             Article 2
-            <Raiting value={ratingValue} />
-            <Raiting value={ratingValue} />
-            <Raiting value={ratingValue} />
-            <Raiting value={ratingValue} />
-            <Raiting value={ratingValue} />
-            <Raiting value={ratingValue} />
+            <Raiting value={ratingValue} onClick={setRatingValue}/>
+            <Raiting value={ratingValue} onClick={setRatingValue}/>
 <div>
     <OnOff />
     <OnOff />
