@@ -11,6 +11,7 @@ function App() {
     console.log("App rendered")
 
     let[ratingValue, setRatingValue] = useState<RatingValueType>(3)
+    let[accardionCollapsed, setAccardionCollapsed] = useState<boolean>(false)
 
 
     return (
@@ -19,8 +20,8 @@ function App() {
             <PageTitle title={"User"} />
             <PageTitle title={"My friend"} />
             Article 1
-            <Accordion titleValue={"--Menu--"} collapsed={true} />
-            <Accordion titleValue={"--Users--"} collapsed={false} />
+            <Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} />
+            <Accordion titleValue={"--Users--"} collapsed={accardionCollapsed} />
             Article 2
             <Raiting value={ratingValue} onClick={setRatingValue}/>
             <Raiting value={ratingValue} onClick={setRatingValue}/>
