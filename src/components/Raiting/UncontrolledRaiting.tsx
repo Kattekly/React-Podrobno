@@ -25,5 +25,5 @@ type StarPropsType = {
 }
 
 function Star(props: StarPropsType) {
-  return props.selected ? <span onClick={UncontrolledRaiting}><b>star </b></span> : <span>star </span>
+    return <span> {props.selected ? <b>star</b> : "star"} </span>
 }
