@@ -12,6 +12,7 @@ function App() {
 
     let[ratingValue, setRatingValue] = useState<RatingValueType>(3)
     let[accardionCollapsed, setAccardionCollapsed] = useState<boolean>(true)
+    let[switchOn, setSwitchOn] = useState<boolean>(false)
 
 
     return (
@@ -26,7 +27,7 @@ function App() {
             <Raiting value={ratingValue} onClick={setRatingValue}/>
             <Raiting value={ratingValue} onClick={setRatingValue}/>
 <div>
-    <OnOff on={true} onCange={(on) => {alert(on)}}/>
+    <OnOff on={switchOn} onCange={(on) => {setSwitchOn(on)}}/>
 
 </div>
 
