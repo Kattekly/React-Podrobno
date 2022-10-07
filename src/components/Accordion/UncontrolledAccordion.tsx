@@ -11,7 +11,6 @@ let[collapsed, setCollapsed] = useState(true)
 
         return <div>
             <AccordionTitle title={props.titleValue}/>
-            <button onClick={() => {setCollapsed(!collapsed)}}>TOGGLE</button>
             {!collapsed && <AccordionBody/>}
         </div>
     }
