@@ -26,8 +26,8 @@ function App() {
             <Raiting value={ratingValue} onClick={setRatingValue}/>
             <Raiting value={ratingValue} onClick={setRatingValue}/>
 <div>
-    <OnOff />
-    <OnOff />
+    <OnOff on={true} onCange={(on) => {alert(on)}}/>
+
 </div>
 
             <div>
