@@ -5,7 +5,7 @@ import {Raiting, RatingValueType} from "./components/Raiting/Raiting";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
 import {UncontrolledRaiting} from "./components/Raiting/UncontrolledRaiting";
-import {TrackRefUncontrolledInput, TrackUncontrolledInput} from "./components/Input/Input";
+import {ControlledInput, TrackRefUncontrolledInput, TrackUncontrolledInput} from "./components/Input/Input";
 
 
 function App() {
@@ -46,6 +46,7 @@ function App() {
             </div>
             <div><TrackUncontrolledInput/></div>
             <div><TrackRefUncontrolledInput/></div>
+            <div><ControlledInput/></div>
             {/*<div>
                 <OnOff1 call={true}/>
             </div>

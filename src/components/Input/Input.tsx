@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {ChangeEvent, useRef, useState} from 'react';
 
 
 // неконтролируемый инпут
@@ -9,13 +9,15 @@ export const TrackUncontrolledInput = () => {
 
     const [value, setValue] = useState('')
 
-    return <><input onChange={(e)=> {
-           const actualValue = e.currentTarget.value
-           setValue(actualValue)
-       }}/> - {value} </>
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const actualValue = e.currentTarget.value
+        setValue(actualValue)}
+
+    return <><input value={value} onChange={ onChange
+       }/> - {value} </>
 };
 
-//значение ноконтролю импута через ref
+//значение неконтрол. импута через ref/ сохранить кнопкой
 export const TrackRefUncontrolledInput = () => {
     const [value, setValue] = useState('')
     const inputRef = useRef<HTMLInputElement>(null)
@@ -26,5 +28,18 @@ export const TrackRefUncontrolledInput = () => {
         setValue(el.value)
     }
 
-    return <><input ref={inputRef} id={'inputId'}/> <button onClick={save}>Save</button> - actual value: {value} </>
+    return <><input  ref={inputRef} /> <button onClick={save}>Save</button> - actual value: {value} </>
 };
+
+//контролируемый инпут
+export const ControlledInput = () => {
+
+}
+
+export const ControlledCheckbox = () => {
+
+}
+
+export const ControlledSelect = () => {
+
+}
