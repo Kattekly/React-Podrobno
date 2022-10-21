@@ -11,10 +11,11 @@ export const TrackUncontrolledInput = () => {
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         const actualValue = e.currentTarget.value
-        setValue(actualValue)}
+        setValue(actualValue)
+    }
 
-    return <><input value={value} onChange={ onChange
-       }/> - {value} </>
+    return <><input value={value} onChange={onChange
+    }/> - {value} </>
 };
 
 //значение неконтрол. импута через ref/ сохранить кнопкой
@@ -28,18 +29,41 @@ export const TrackRefUncontrolledInput = () => {
         setValue(el.value)
     }
 
-    return <><input  ref={inputRef} /> <button onClick={save}>Save</button> - actual value: {value} </>
+    return <><input ref={inputRef}/>
+        <button onClick={save}>Save</button>
+        - actual value: {value} </>
 };
 
-//контролируемый инпут
+//контролируемый инпут value={parentValue}
 export const ControlledInput = () => {
-
+    const [parentValue, setParentValue] = useState('')
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setParentValue(e.currentTarget.value)
+    }
+    return < input value={parentValue} onChange={onChange}/>
 }
 
+//контролируемый чекбокс checked={parentValue}
 export const ControlledCheckbox = () => {
+    const [parentValue, setParentValue] = useState(true)
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setParentValue(e.currentTarget.checked)
+    }
+    return < input type="checkbox" checked={parentValue} onChange={onChange}/>
 
 }
 
+//контррлируемая менюшка с выбором
 export const ControlledSelect = () => {
+    const [parentValue, setParentValue] = useState<string | undefined> ('')
+    const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
+        setParentValue(e.currentTarget.value)
+    }
+    return <select value={parentValue} onChange={onChange}>
+        <option>none</option>
+        <option value={'1'}>Minsk</option>
+        <option value={'2'}>Kiev</option>
+        <option value={'3'}>Moscow</option>
+    </select>
 
 }

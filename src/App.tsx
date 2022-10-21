@@ -5,7 +5,12 @@ import {Raiting, RatingValueType} from "./components/Raiting/Raiting";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
 import {UncontrolledRaiting} from "./components/Raiting/UncontrolledRaiting";
-import {ControlledInput, TrackRefUncontrolledInput, TrackUncontrolledInput} from "./components/Input/Input";
+import {
+    ControlledCheckbox,
+    ControlledInput, ControlledSelect,
+    TrackRefUncontrolledInput,
+    TrackUncontrolledInput
+} from "./components/Input/Input";
 
 
 function App() {
@@ -47,6 +52,8 @@ function App() {
             <div><TrackUncontrolledInput/></div>
             <div><TrackRefUncontrolledInput/></div>
             <div><ControlledInput/></div>
+            <div><ControlledCheckbox/></div>
+            <div><ControlledSelect/></div>
             {/*<div>
                 <OnOff1 call={true}/>
             </div>
