@@ -27,9 +27,13 @@ function App() {
             <PageTitle title={"User"}/>
             <PageTitle title={"My friend"}/>
             Article 1
-            <Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
+            {/*<Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
                 setAccardionCollapsed(!accardionCollapsed)
-            }}/>
+            }}/>*/}
+
+
+            <Accordion titleValue={"--Menu--"} collapsed={false} onCange={() => {
+                setAccardionCollapsed(!accardionCollapsed)}} items={['Kate', 'Pem']}/>
 
             Article 2
             <Raiting value={ratingValue} onClick={setRatingValue}/>
