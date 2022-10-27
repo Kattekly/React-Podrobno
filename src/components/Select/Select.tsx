@@ -12,7 +12,6 @@ type ItemType = {
     value: any
 }
 
-
 export function Select(props: SelectPropsType) {
 
     const [active, setActive] = useState(false)
@@ -32,16 +31,22 @@ export function Select(props: SelectPropsType) {
     }
 
     const onKeyPress = (e: KeyboardEvent<HTMLDivElement>) => {
-        if (e.key === "ArrowDown" || e.key === "ArrowUp" ) {
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0; i < props.items.length; i++) {
                 if (props.items[i].value === hoveredElValue) {
-                    const elementPretendent = e.key === "ArrowDown" ? props.items[i + 1]: props.items[i - 1]
+                    const elementPretendent = e.key === "ArrowDown" ? props.items[i + 1] : props.items[i - 1]
                     if (elementPretendent) {
                         props.onChange(elementPretendent.value)
-                        break
+                        return
                     }
                 }
             }
+            if (!TitleItems) {
+                props.onChange(props.items[0].value)
+            }
+        }
+        if (e.key === "Enter" || e.key === "Escape") {
+            setActive(false)
         }
     }
 
