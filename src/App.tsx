@@ -38,7 +38,9 @@ function App() {
                        onClick={() => {alert()}}/>
 
 
-            <Select onChange={() => alert("ghhj")} value={"1"} items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}]} />
+            <Select onChange={() => alert("ghhj")} value={"2"} items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}]} />
+
+            <Select onChange={() => alert("ghhj")} items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}]} />
 
             Article 2
             <Raiting value={ratingValue} onClick={setRatingValue}/>

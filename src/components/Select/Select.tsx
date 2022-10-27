@@ -1,6 +1,6 @@
 
 type SelectPropsType = {
-    value: any
+    value?: any
     onChange: (value: any) => void
     items: Array<ItemType>
 }
@@ -12,15 +12,13 @@ type ItemType = {
 
 
 export function Select (props: SelectPropsType) {
-    const TitleItems = (title: string, value: number) => {
-    let newTitle = props.items.find(t => t.value === value)
-       return  newTitle
-}
+    const TitleItems = props.items.find(t => t.value === props.value)
+
 
 return (
     <div>
-        <div onChange={TitleItems}></div>
-        {props.items.map(el => <div>{el.title}</div>)}
+        <h3>{TitleItems && TitleItems.title}</h3>
+        {props.items.map(el => <div key={el.value}>{el.title}</div>)}
     </div>
 )
 }
