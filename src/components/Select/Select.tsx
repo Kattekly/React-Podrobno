@@ -14,24 +14,26 @@ type ItemType = {
 }
 
 
-export function Select (props: SelectPropsType) {
+export function Select(props: SelectPropsType) {
     const TitleItems = props.items.find(t => t.value === props.value)
-const [active, setActiv] = useState(false)
+    const [active, setActive] = useState(false)
 
-return (
-    <>
-   {/*<select>
+    return (
+        <>
+            {/*<select>
        <option value="">Minsk</option>
        <option value="">Moscow</option>
        <option value="">Kiev</option>
    </select>*/}
 
-    <div className={styles.select + " " + styles.active}>
-        <h3>{TitleItems && TitleItems.title}</h3>
-        <div className={styles.items}>
-        {props.items.map(el => <div key={el.value}>{el.title}</div>)}
-        </div>
-    </div>
-    </>
-)
+            <div className={styles.select + " "}>
+                <h3>{TitleItems && TitleItems.title}</h3>
+                {active &&
+                    <div className={styles.items}>
+                        {props.items.map(el => <div key={el.value}>{el.title}</div>)}
+                    </div>
+                }
+            </div>
+        </>
+    )
 }
