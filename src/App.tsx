@@ -11,6 +11,7 @@ import {
     TrackRefUncontrolledInput,
     TrackUncontrolledInput
 } from "./components/Input/Input";
+import {Select} from "./components/Select/Select";
 
 
 function App() {
@@ -32,8 +33,12 @@ function App() {
             }}/>*/}
 
 
-            <Accordion titleValue={"--Menu--"} collapsed={false} onCange={() => {
-                setAccardionCollapsed(!accardionCollapsed)}} items={['Kate', 'Pem']}/>
+            <Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
+                setAccardionCollapsed(!accardionCollapsed)}} items={[{title: 'Kate', value: 1}, {title: "Pem", value: 2}]}
+                       onClick={() => {alert()}}/>
+
+
+            <Select onChange={() => alert("ghhj")} value={"1"} items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}]} />
 
             Article 2
             <Raiting value={ratingValue} onClick={setRatingValue}/>
