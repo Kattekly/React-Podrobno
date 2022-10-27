@@ -20,7 +20,7 @@ function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
     let [accardionCollapsed, setAccardionCollapsed] = useState<boolean>(true)
     let [switchOn, setSwitchOn] = useState<boolean>(false)
-
+    let [value, setValue] = useState('2')
 
     return (
         <div className={'App'}>
@@ -34,13 +34,18 @@ function App() {
 
 
             <Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
-                setAccardionCollapsed(!accardionCollapsed)}} items={[{title: 'Kate', value: 1}, {title: "Pem", value: 2}]}
-                       onClick={() => {alert()}}/>
+                setAccardionCollapsed(!accardionCollapsed)
+            }} items={[{title: 'Kate', value: 1}, {title: "Pem", value: 2}]}
+                       onClick={() => {
+                           alert()
+                       }}/>
 
 
-            <Select onChange={() => alert("ghhj")} value={"2"} items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}]} />
+            <Select onChange={setValue} value={value}
+                    items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}, {value: "3", title: "Moscow"}]}/>
 
-            <Select onChange={() => alert("ghhj")} items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}]} />
+          {/*  <Select onChange={setValue}
+                    items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}, {value: "3", title: "Moscow"}]}/>*/}
 
             Article 2
             <Raiting value={ratingValue} onClick={setRatingValue}/>

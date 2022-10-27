@@ -1,6 +1,6 @@
 import {inspect} from "util";
 import styles from "./Select.module.css"
-import {useState} from "react";
+import {MouseEventHandler, useState} from "react";
 
 type SelectPropsType = {
     value?: any
@@ -17,20 +17,20 @@ type ItemType = {
 export function Select(props: SelectPropsType) {
     const TitleItems = props.items.find(t => t.value === props.value)
     const [active, setActive] = useState(false)
+    const toggleItems = () => setActive(!active)
+    const onItemClick = (value: any) => {
+      props.onChange(value);
+      toggleItems()
+    }
+
 
     return (
         <>
-            {/*<select>
-       <option value="">Minsk</option>
-       <option value="">Moscow</option>
-       <option value="">Kiev</option>
-   </select>*/}
-
-            <div className={styles.select + " "}>
-                <h3>{TitleItems && TitleItems.title}</h3>
+            <div className={styles.select}>
+                <span className={styles.main} onClick={toggleItems}>{TitleItems && TitleItems.title}</span>
                 {active &&
                     <div className={styles.items}>
-                        {props.items.map(el => <div key={el.value}>{el.title}</div>)}
+                        {props.items.map(el => <div key={el.value} onClick={() => {onItemClick(el.value)}}>{el.title}</div>)}
                     </div>
                 }
             </div>
