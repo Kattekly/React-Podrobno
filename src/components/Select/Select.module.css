@@ -6,8 +6,13 @@
 }
 
 .items {
- /*   position: absolute;*/
+    /*position: absolute;*/   width: 60px;
     padding: 5px;
     border: 1px solid black;
+
 }
 
+.item.selected {
+background-color: #1ea7fd;
+    color: #e7fdd8;
+}
