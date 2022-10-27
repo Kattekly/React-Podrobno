@@ -32,11 +32,12 @@ export function Select(props: SelectPropsType) {
     }
 
     const onKeyPress = (e: KeyboardEvent<HTMLDivElement>) => {
-        if (e.key === "ArrowDown") {
+        if (e.key === "ArrowDown" || e.key === "ArrowUp" ) {
             for (let i = 0; i < props.items.length; i++) {
                 if (props.items[i].value === hoveredElValue) {
-                    if (props.items[i + 1]) {
-                        props.onChange(props.items[i + 1].value)
+                    const elementPretendent = e.key === "ArrowDown" ? props.items[i + 1]: props.items[i - 1]
+                    if (elementPretendent) {
+                        props.onChange(elementPretendent.value)
                         break
                     }
                 }
