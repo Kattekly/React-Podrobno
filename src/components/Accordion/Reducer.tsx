@@ -2,7 +2,7 @@ type ActionType = {
     type: string
 }
 
-type StateType = {
+export type StateType = {
     collapsed: boolean
 }
 
