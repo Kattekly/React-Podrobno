@@ -5,6 +5,15 @@ type AccordionPropsType = {
    // collapsed?: boolean
 }
 
+
+type ActionType = {
+    type: string
+}
+
+let reducer = (state: boolean, action: ActionType) => {
+    return state
+}
+
 export function UncontrolledAccordion(props: AccordionPropsType) {
     console.log("Accordion rendered")
 let[collapsed, setCollapsed] = useState(true)

@@ -17,20 +17,20 @@ import {Select} from "./components/Select/Select";
 function App() {
     console.log("App rendered")
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
+ /*   let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
     let [accardionCollapsed, setAccardionCollapsed] = useState<boolean>(true)
     let [switchOn, setSwitchOn] = useState<boolean>(false)
-    let [value, setValue] = useState('2')
+    let [value, setValue] = useState('2')*/
 
     return (
         <div className={'App'}>
-            <PageTitle title={"App component"}/>
+          {/*  <PageTitle title={"App component"}/>
             <PageTitle title={"User"}/>
             <PageTitle title={"My friend"}/>
             Article 1
-            {/*<Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
+            <Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
                 setAccardionCollapsed(!accardionCollapsed)
-            }}/>*/}
+            }}/>
 
 
             <Accordion titleValue={"--Menu--"} collapsed={accardionCollapsed} onCange={() => {
@@ -44,8 +44,8 @@ function App() {
             <Select onChange={setValue} value={value}
                     items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}, {value: "3", title: "Moscow"}]}/>
 
-          {/*  <Select onChange={setValue}
-                    items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}, {value: "3", title: "Moscow"}]}/>*/}
+            <Select onChange={setValue}
+                    items={[{value: "1", title: "Minsk"}, {value: "2", title: "Kiev"}, {value: "3", title: "Moscow"}]}/>
 
             Article 2
             <Raiting value={ratingValue} onClick={setRatingValue}/>
@@ -55,13 +55,13 @@ function App() {
                     setSwitchOn(on)
                 }}/>
 
-            </div>
+            </div>*/}
 
             <div>
                 <UncontrolledAccordion titleValue={"--Menu--"}/>
-                <UncontrolledAccordion titleValue={"--Users--"}/>
+                {/*<UncontrolledAccordion titleValue={"--Users--"}/>*/}
             </div>
-
+{/*
             <div>
                 <UncontrolledRaiting/>
             </div>
@@ -69,7 +69,7 @@ function App() {
             <div><TrackRefUncontrolledInput/></div>
             <div><ControlledInput/></div>
             <div><ControlledCheckbox/></div>
-            <div><ControlledSelect/></div>
+            <div><ControlledSelect/></div>*/}
             {/*<div>
                 <OnOff1 call={true}/>
             </div>
