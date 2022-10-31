@@ -1,4 +1,5 @@
 import React, {useReducer, useState} from "react";
+import {reducer} from "./Reducer";
 
 type AccordionPropsType = {
     titleValue: string
@@ -8,15 +9,6 @@ type AccordionPropsType = {
 
 type ActionType = {
     type: string
-}
-
-let reducer = (state: boolean, action: ActionType) => {
-    switch (action.type) {
-        case "TOGGLE-COLLAPSED":
-            return !state
-        default: return state
-    }
-    return state
 }
 
 export function UncontrolledAccordion(props: AccordionPropsType) {
