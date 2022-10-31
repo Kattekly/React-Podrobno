@@ -24,6 +24,7 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
 let[collapsed, dispatch] = useReducer(reducer, false)
 
         return <div>
+          {/*  <AccordionTitle title={props.titleValue} onClick={() => {setCollapsed(!collapsed)}}/>*/}
             <AccordionTitle title={props.titleValue} onClick={() => {dispatch({type: "TOGGLE-COLLAPSED"})}}/>
             {!collapsed && <AccordionBody/>}
         </div>
