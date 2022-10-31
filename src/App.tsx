@@ -12,6 +12,7 @@ import {
     TrackUncontrolledInput
 } from "./components/Input/Input";
 import {Select} from "./components/Select/Select";
+import {ReactMemo} from "./components/ReactMemo";
 
 
 function App() {
@@ -61,6 +62,9 @@ function App() {
                 <UncontrolledAccordion titleValue={"--Menu--"}/>
                 {/*<UncontrolledAccordion titleValue={"--Users--"}/>*/}
             </div>
+
+            <ReactMemo/>
+
 {/*
             <div>
                 <UncontrolledRaiting/>

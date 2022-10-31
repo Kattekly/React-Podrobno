@@ -1,20 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Counter = (props: { count: number }) => {
     return <div>{props.count}</div>
 }
 
 const User = (props: { users: Array<string> }) => {
-    return <div>{props.users.map((u, i) => <div>{u}</div>)}</div>
+    return <div>{props.users.map((u, i) => <div key={i}>{u}</div>)}</div>
 }
 
-const ReactMemo = () => {
+export const ReactMemo = () => {
+    const [counter, setCounter] = useState(0)
+    const [users, setUsers] = useState(['Kate', 'Lera', 'Vlad'])
     return (
         <div>
-            <Counter count={10}/>
-            <User users={['Kate', 'Lera', 'Vlad']}/>
+            <button onClick={() => setCounter(counter + 1)}>+</button>
+            <Counter count={counter}/>
+            <User users={users}/>
         </div>
     );
 };
-
-export default ReactMemo;
