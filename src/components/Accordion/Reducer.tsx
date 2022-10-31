@@ -9,11 +9,10 @@ type StateType = {
 export let reducer = (state: StateType, action: ActionType): StateType => {
     switch (action.type) {
         case "TOGGLE-COLLAPSED":
-            const stateCopy = {
+            return  {
                 ...state,
                 collapsed: !state.collapsed
             }
-            return stateCopy
         default: return state
     }
     return state
