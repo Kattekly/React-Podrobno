@@ -11,8 +11,10 @@ type ActionType = {
 }
 
 let reducer = (state: boolean, action: ActionType) => {
-    if (action.type === "TOGGLE-COLLAPSED") {
-        return !state
+    switch (action.type) {
+        case "TOGGLE-COLLAPSED":
+            return !state
+        default: return state
     }
     return state
 }
