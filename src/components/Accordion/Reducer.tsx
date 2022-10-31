@@ -13,7 +13,7 @@ export let reducer = (state: StateType, action: ActionType): StateType => {
                 ...state,
                 collapsed: !state.collapsed
             }
-        default: return state
+        default: throw new Error('Bad action type')
     }
     return state
 }
