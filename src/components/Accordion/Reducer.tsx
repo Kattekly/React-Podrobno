@@ -2,10 +2,16 @@ type ActionType = {
     type: string
 }
 
-export let reducer = (state: boolean, action: ActionType) => {
+type StateType = {
+    collapsed: boolean
+}
+
+export let reducer = (state: StateType, action: ActionType): StateType => {
     switch (action.type) {
         case "TOGGLE-COLLAPSED":
-            return !state
+            const stateCopy = {...state}
+            stateCopy.collapsed = !state.collapsed
+            return stateCopy
         default: return state
     }
     return state
