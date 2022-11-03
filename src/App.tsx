@@ -13,7 +13,9 @@ import {
 } from "./components/Input/Input";
 import {Select} from "./components/Select/Select";
 import {ReactMemo} from "./components/ReactMemo";
-import UseMemo from "./components/UseMemo";
+import {UseMemo} from "./components/UseMemo";
+import {HelpReactMemo} from "./components/React-and-UseMemo";
+
 
 
 function App() {
@@ -67,6 +69,7 @@ function App() {
             <ReactMemo/>
 
             <UseMemo/>
+            <HelpReactMemo/>
 
 {/*
             <div>

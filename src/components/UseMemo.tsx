@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from 'react';
 
 
-const UseMemo = () => {
+export const UseMemo = () => {
     const [a, setA] = useState<number>(6)
     const [b, setB] = useState<number>(6)
 
@@ -42,4 +42,3 @@ const UseMemo = () => {
     );
 };
 
-export default UseMemo;
