@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 
 const UseMemo = () => {
@@ -8,9 +8,20 @@ const UseMemo = () => {
     let resultA = 1
     let resultB = 1
 
-    for (let i = 1; i <= a; i++) {
-        resultA = resultA * i
-    }
+    resultA = useMemo(() => {
+        let tempResultA = 1
+        for (let i = 1; i <= a; i++) {
+            let fake = 0
+            while (fake < 100000000) {
+                fake++
+                const fakeValue = Math.random()
+            }
+            tempResultA = tempResultA * i
+        }
+        return tempResultA
+    }, [a])
+
+
 
     for (let i = 1; i <= b; i++) {
         resultB = resultB * i
