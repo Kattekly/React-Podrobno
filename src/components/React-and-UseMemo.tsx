@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 
 const UserSecret = (props: { users: Array<string> }) => {
     console.log("HEHEHELLO")
@@ -13,11 +13,20 @@ export const HelpReactMemo = () => {
     const [counter, setCounter] = useState(0)
     const [users, setUsers] = useState(['Kate', 'Lera', 'Vlad', 'Sem'])
 
-    const newArray = users.filter(u => u.toLowerCase().indexOf("a") > -1)
+    const newArray = useMemo(() => {
+        return users.filter(u => u.toLowerCase().indexOf("a") > -1)
+    }, [users])
+
+
+    const addUser = () => {
+        const newUser = [...users, 'Sveta ' + new Date().getTime()]
+        setUsers(newUser)
+    }
 
     return (
         <div>
             <button onClick={() => setCounter(counter + 1)}>+</button>
+            <button onClick={addUser}>add</button>
             {counter}
             <Users users={newArray}/>
         </div>
