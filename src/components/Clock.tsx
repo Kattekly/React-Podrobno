@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 const Clock = () => {
-    const [date, setDate] = useState<Date>(new Date())
+    const [date, setDate] = useState(new Date())
 
     const stringTime = new Intl.DateTimeFormat('ru', {
         hour: "numeric",
@@ -14,8 +14,7 @@ const Clock = () => {
          setInterval(() => {
             setDate(new Date())
         }, 1000)
-    })
-
+    }, [])
 
     return (
         <div>
