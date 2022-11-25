@@ -10,10 +10,16 @@ const Clock = () => {
     }).format(date)
 
 
-    useEffect( () => {
-         setInterval(() => {
+    useEffect(() => {
+
+        const intervalID = setInterval(() => {
             setDate(new Date())
         }, 1000)
+
+        return () => {
+            clearInterval(intervalID)
+        }
+
     }, [])
 
     return (
