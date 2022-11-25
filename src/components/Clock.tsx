@@ -1,13 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 const Clock = () => {
-   function restoreState<T>(key: string, defaultState: T) {
-        let state = defaultState
-        const stateAsString = localStorage.getItem(key)
-        if (stateAsString !== null) state = JSON.parse(stateAsString) as T
-        return state
-    }
-    const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
+    const [date, setDate] = useState<Date>(new Date())
+
     const stringTime = new Intl.DateTimeFormat('ru', {
         hour: "numeric",
         minute: "numeric",
@@ -16,7 +11,7 @@ const Clock = () => {
 
 
     useEffect( () => {
-        const id: number = window.setInterval(() => {
+         setInterval(() => {
             setDate(new Date())
         }, 1000)
     })
