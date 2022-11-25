@@ -15,20 +15,20 @@ import {Select} from "./components/Select/Select";
 import {ReactMemo} from "./components/ReactMemo";
 import {UseMemo} from "./components/UseMemo";
 import {HelpReactMemo} from "./components/React-and-UseMemo";
-
+import Clock from "./components/Clock";
 
 
 function App() {
     console.log("App rendered")
 
- /*   let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
-    let [accardionCollapsed, setAccardionCollapsed] = useState<boolean>(true)
-    let [switchOn, setSwitchOn] = useState<boolean>(false)
-    let [value, setValue] = useState('2')*/
+    /*   let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
+       let [accardionCollapsed, setAccardionCollapsed] = useState<boolean>(true)
+       let [switchOn, setSwitchOn] = useState<boolean>(false)
+       let [value, setValue] = useState('2')*/
 
     return (
         <div className={'App'}>
-          {/*  <PageTitle title={"App component"}/>
+            {/*  <PageTitle title={"App component"}/>
             <PageTitle title={"User"}/>
             <PageTitle title={"My friend"}/>
             Article 1
@@ -60,7 +60,7 @@ function App() {
                 }}/>
 
             </div>*/}
-
+            <Clock/>
             <div>
                 <UncontrolledAccordion titleValue={"--Menu--"}/>
                 {/*<UncontrolledAccordion titleValue={"--Users--"}/>*/}
@@ -71,7 +71,7 @@ function App() {
             <UseMemo/>
             <HelpReactMemo/>
 
-{/*
+            {/*
             <div>
                 <UncontrolledRaiting/>
             </div>
