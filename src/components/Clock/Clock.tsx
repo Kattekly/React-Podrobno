@@ -13,6 +13,7 @@ const Clock = () => {
     useEffect(() => {
 
         const intervalID = setInterval(() => {
+            console.log('setInt')
             setDate(new Date())
         }, 1000)
 

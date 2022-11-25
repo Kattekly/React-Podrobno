@@ -15,7 +15,7 @@ import {Select} from "./components/Select/Select";
 import {ReactMemo} from "./components/ReactMemo";
 import {UseMemo} from "./components/UseMemo";
 import {HelpReactMemo} from "./components/React-and-UseMemo";
-import Clock from "./components/Clock";
+import Clock from "./components/Clock/Clock";
 
 
 function App() {
