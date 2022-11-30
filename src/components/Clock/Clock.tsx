@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react';
 
-const Clock = () => {
+type PropsType = {
+    mode: 'digital' | 'analog'
+}
+
+
+const Clock = (props: PropsType) => {
     const [date, setDate] = useState(new Date())
 
     const stringTime = new Intl.DateTimeFormat('ru', {
