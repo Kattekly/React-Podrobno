@@ -16,6 +16,7 @@ import {ReactMemo} from "./components/ReactMemo";
 import {UseMemo} from "./components/UseMemo";
 import {HelpReactMemo} from "./components/React-and-UseMemo";
 import Clock from "./components/Clock/Clock";
+import Clock2 from "./components/Clock/Clock2";
 
 
 function App() {
@@ -60,8 +61,8 @@ function App() {
                 }}/>
 
             </div>*/}
-            <Clock mode={'digital'}/>
-            <Clock mode={'analog'}/>
+            <Clock />
+            <Clock2/>
             <div>
                 <UncontrolledAccordion titleValue={"--Menu--"}/>
                 {/*<UncontrolledAccordion titleValue={"--Users--"}/>*/}
