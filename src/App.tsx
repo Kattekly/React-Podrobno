@@ -60,7 +60,8 @@ function App() {
                 }}/>
 
             </div>*/}
-            <Clock/>
+            <Clock mode={'digital'}/>
+            <Clock mode={'analog'}/>
             <div>
                 <UncontrolledAccordion titleValue={"--Menu--"}/>
                 {/*<UncontrolledAccordion titleValue={"--Users--"}/>*/}

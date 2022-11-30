@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 type PropsType = {
-    mode: 'digital' | 'analog'
+    mode?: 'digital' | 'analog'
 }
 
 
@@ -30,7 +30,7 @@ const Clock = (props: PropsType) => {
 
     return (
         <div>
-            <strong>{stringTime}</strong>
+            {props.mode === 'digital' ? <strong>{stringTime}</strong> : <>Analog</>}
         </div>
     );
 };
