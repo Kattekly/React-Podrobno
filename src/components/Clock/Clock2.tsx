@@ -21,14 +21,26 @@ const Clock2 = (props: PropsType) => {
 
     }, [])
 
+
+    let view
+    switch (props.mode) {
+        case 'analog':
+            view = <span>Analog</span>
+            break;
+        case 'digital':
+        default:
+            view = <>
+                <span>{get2digitsString(date.getHours())}</span>
+                :
+                <span>{get2digitsString(date.getMinutes())}</span>
+                :
+                <span>{get2digitsString(date.getSeconds())}</span>
+            </>
+    }
+
+
     return (
-        <div>
-            <span>{get2digitsString(date.getHours())}</span>
-            :
-            <span>{get2digitsString(date.getMinutes())}</span>
-            :
-            <span>{get2digitsString(date.getSeconds())}</span>
-        </div>
+        <div>{view}</div>
     );
 };
 

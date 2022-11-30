@@ -62,7 +62,8 @@ function App() {
 
             </div>*/}
             <Clock />
-            <Clock2/>
+            <Clock2 mode={'digital'}/>
+            <Clock2 mode={'analog'}/>
             <div>
                 <UncontrolledAccordion titleValue={"--Menu--"}/>
                 {/*<UncontrolledAccordion titleValue={"--Users--"}/>*/}
