@@ -44,4 +44,27 @@ const Clock2 = (props: PropsType) => {
     );
 };
 
+
+
+
 export default Clock2;
+
+
+type ClockViewPropsType = {
+    date: Date
+}
+
+
+export const DigitalClockView: React.FC<ClockViewPropsType> = ({date}) => {
+return <>
+    <span>{get2digitsString(date.getHours())}</span>
+    :
+    <span>{get2digitsString(date.getMinutes())}</span>
+    :
+    <span>{get2digitsString(date.getSeconds())}</span>
+</>
+}
+
+export const AnalogClockView = () => {
+
+}
